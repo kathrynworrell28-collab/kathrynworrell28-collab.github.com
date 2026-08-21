@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>El Salvador — Proyecto de país de habla hispana</title>
+<style>
+:root{
+  --azul:#0b5bd3; --azul2:#073a88; --cielo:#edf5ff; --blanco:#fff;
+  --texto:#182235; --gris:#627083; --dorado:#f0c24b; --borde:#dbe7f6;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--texto);background:#f8fbff;line-height:1.55}
+nav{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.96);border-bottom:1px solid var(--borde);
+display:flex;justify-content:space-between;gap:20px;align-items:center;padding:12px 5%;box-shadow:0 2px 14px rgba(0,0,0,.05)}
+nav .brand{font-weight:900;color:var(--azul2)}
+nav .links{display:flex;gap:13px;flex-wrap:wrap}
+nav a{text-decoration:none;color:var(--azul2);font-size:.87rem;font-weight:800}
+.hero{min-height:72vh;display:grid;place-items:center;text-align:center;color:white;padding:80px 8%;
+background:linear-gradient(rgba(3,38,87,.62),rgba(3,38,87,.82)),linear-gradient(135deg,#2580e8,#0b5bd3 48%,#073a88)}
+.hero h1{font-size:clamp(3.4rem,9vw,7rem);line-height:.95;margin:12px 0}
+.hero p{max-width:760px;margin:18px auto;font-size:1.15rem}
+.flag{width:210px;height:126px;margin:auto;border-radius:10px;background:linear-gradient(#1467c8 0 33.33%,#fff 33.33% 66.66%,#1467c8 66.66%);
+box-shadow:0 10px 30px rgba(0,0,0,.22);display:grid;place-items:center;color:#7b9850;font-size:34px}
+.badge{display:inline-block;padding:8px 14px;border:1px solid rgba(255,255,255,.4);border-radius:99px;background:rgba(255,255,255,.12);font-weight:700}
+section{max-width:1180px;margin:auto;padding:68px 7%}
+.full{max-width:none;background:var(--azul2);color:white}
+.full .wrap{max-width:1180px;margin:auto;padding:68px 7%}
+h2{font-size:2.15rem;color:var(--azul2);margin:0 0 8px}
+.full h2{color:white}
+.lead{color:var(--gris);max-width:800px;margin-top:0}
+.full .lead{color:#d7e7ff}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:18px;margin-top:26px}
+.card{background:white;border:1px solid var(--borde);border-radius:20px;padding:22px;box-shadow:0 8px 24px rgba(8,58,120,.06)}
+.card h3{margin:0 0 8px;color:var(--azul)}
+.full .card{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.16);color:white}
+.full .card h3{color:white}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin-top:24px}
+.fact{background:white;border:1px solid var(--borde);border-radius:16px;padding:18px}
+.fact b{display:block;color:var(--azul);font-size:.76rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
+.fact span{font-weight:800}
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center;margin-top:26px}
+.photo{width:100%;border-radius:20px;display:block;min-height:260px;object-fit:cover;background:#dfe9f6}
+.caption{font-size:.82rem;color:var(--gris);margin-top:7px}
+.full .caption{color:#d7e7ff}
+.place img,.food img{width:100%;height:190px;object-fit:cover;border-radius:14px;margin-bottom:13px;background:#dfe9f6}
+.recipe{background:#fff8df;border:1px solid #f0dc9a;border-radius:20px;padding:24px;margin-top:24px}
+.recipe h3{margin-top:0;color:#7a5a00}
+.tradition{border-left:4px solid var(--dorado);padding-left:16px}
+.venn{display:flex;justify-content:center;align-items:center;min-height:320px;margin-top:22px;overflow:hidden}
+.circle{width:250px;height:250px;border-radius:50%;display:grid;place-items:center;text-align:center;padding:40px;font-weight:700}
+.left{background:rgba(11,91,211,.18);margin-right:-52px;border:2px solid rgba(11,91,211,.45)}
+.right{background:rgba(240,194,75,.25);margin-left:-52px;border:2px solid rgba(202,153,25,.5)}
+.middle{position:absolute;width:145px;text-align:center;font-size:.9rem;font-weight:800}
+.music-card{position:relative;overflow:hidden;padding:0;min-height:350px}
+.music-img{height:210px;background:linear-gradient(135deg,#183a65,#0b5bd3);display:grid;place-items:center;color:white;font-size:2.4rem;font-weight:900}
+.music-body{padding:20px}
+.yt{display:inline-block;text-decoration:none;background:#d82424;color:white;padding:10px 14px;border-radius:10px;font-weight:800;margin-top:10px}
+.script{background:linear-gradient(135deg,#eef6ff,#fff);border:1px solid var(--borde);border-radius:22px;padding:26px}
+.script p{margin:0 0 13px}
+.check{font-weight:800;color:#1b6d34}
+.sources li{margin-bottom:8px}
+footer{text-align:center;background:#052c65;color:#dceaff;padding:26px 6%}
+.small{font-size:.9rem;color:var(--gris)}
+@media(max-width:800px){.split{grid-template-columns:1fr}.venn{transform:scale(.82)}nav{align-items:flex-start;flex-direction:column}.links{max-height:90px;overflow:auto}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="brand">🇸🇻 EL SALVADOR</div>
+  <div class="links">
+    <a href="#ubicacion">Ubicación</a><a href="#gobierno">Gobierno</a><a href="#moneda">Moneda</a>
+    <a href="#comida">Comida</a><a href="#historicos">Históricos</a><a href="#turisticos">Turísticos</a>
+    <a href="#tradiciones">Tradiciones</a><a href="#familia">Familia</a><a href="#musica">Música</a><a href="#micro">Micro</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div>
+    <div class="flag">★</div>
+    <div class="badge">Proyecto de país de habla hispana</div>
+    <h1>El Salvador</h1>
+    <p>Un país pequeño en tamaño, pero grande en cultura, paisajes, historia, tradiciones y sabor.</p>
+  </div>
+</header>
+
+
+<section id="bienvenida">
+  <h2>Bienvenidos a El Salvador</h2>
+  <p class="lead">¡Bienvenidos a El Salvador! El Salvador es un pequeño país de América Central lleno de cultura, historia y hermosos paisajes. Es conocido por sus volcanes, playas, comida deliciosa y tradiciones. En este sitio, aprenderás más sobre lo que hace especial a El Salvador.</p>
+</section>
+
+<section id="ubicacion">
+  <h2>Ubicación e información general</h2>
+  <p class="lead">El Salvador está en América Central. Limita con Guatemala, Honduras y el océano Pacífico. Su capital es San Salvador.</p>
+  <div class="facts">
+    <div class="fact"><b>Capital</b><span>San Salvador</span></div>
+    <div class="fact"><b>Idioma oficial</b><span>Español</span></div>
+    <div class="fact"><b>Región</b><span>América Central</span></div>
+    <div class="fact"><b>Gentilicio</b><span>Salvadoreño/a</span></div>
+    <div class="fact"><b>Independencia</b><span>15 de septiembre de 1821</span></div>
+    <div class="fact"><b>Océano</b><span>Pacífico</span></div>
+  </div>
+  <div class="grid">
+    <div class="card"><h3>Dato 1</h3><p>Es el país más pequeño de América Central.</p></div>
+    <div class="card"><h3>Dato 2</h3><p>Es conocido por sus volcanes, lagos y playas para practicar surf.</p></div>
+    <div class="card"><h3>Dato 3</h3><p>Las pupusas son uno de los símbolos más conocidos de su gastronomía.</p></div>
+  </div>
+</section>
+
+<div class="full" id="gobierno">
+  <div class="wrap">
+    <h2>Gobierno y presidente</h2>
+    <p class="lead">El Salvador es una república presidencial. El presidente es jefe de Estado y jefe de Gobierno.</p>
+    <div class="split">
+      <div>
+        <h3>Nayib Armando Bukele Ortez</h3>
+        <p><strong>Presidente actual:</strong> Nayib Bukele.</p>
+        <p>Nació en San Salvador en 1981. Antes de ser presidente fue alcalde de Nuevo Cuscatlán y después alcalde de San Salvador. Ganó las elecciones presidenciales de 2019 y comenzó su segundo mandato en 2024. En 2026 continúa como presidente de la República.</p>
+        <p>Su gobierno es especialmente conocido por sus políticas de seguridad y por impulsar proyectos de modernización e inversión.</p>
+      </div>
+      <div>
+        <img class="photo" src="https://www.presidencia.gob.sv/wp-content/uploads/2019/06/NAYIB-CORRECTA.jpg" alt="Retrato oficial de Nayib Bukele">
+        <div class="caption">Retrato oficial — Presidencia de la República de El Salvador.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="moneda">
+  <h2>La moneda y el tipo de cambio</h2>
+  <div class="grid">
+    <div class="card"><h3>Moneda principal</h3><p><strong>Dólar estadounidense (USD).</strong> Es la moneda usada para precios, compras y salarios.</p></div>
+    <div class="card"><h3>Tipo de cambio</h3><p><strong>$1 USD = $1 USD</strong>. Como El Salvador usa el dólar estadounidense, no hay conversión con el dólar de Estados Unidos.</p></div>
+    <div class="card"><h3>Bitcoin</h3><p>Bitcoin también puede utilizarse de forma voluntaria bajo el marco actual, pero su valor cambia constantemente, por lo que no tiene un tipo de cambio fijo.</p></div>
+  </div>
+</section>
+
+<div class="full" id="comida">
+  <div class="wrap">
+    <h2>La comida</h2>
+    <p class="lead">La comida salvadoreña usa mucho maíz, frijoles, queso, plátano, yuca, carne y verduras.</p>
+    <div class="grid">
+      <div class="card food">
+        <img src="https://surfcityelsalvador.sv/wp-content/uploads/2023/01/9-9-2022-scaled.jpg" alt="Pupusas salvadoreñas">
+        <h3>1. Pupusas</h3>
+        <p>Tortillas gruesas de maíz o arroz rellenas de queso, frijoles, chicharrón, loroco u otros ingredientes. Se sirven con curtido y salsa de tomate.</p>
+      </div>
+      <div class="card food">
+        <img src="https://surfcityelsalvador.sv/wp-content/uploads/2023/01/Gastronomia-RESTAURANT-RELAJO-ZR-07102022-CD-6-scaled.jpg" alt="Tamales salvadoreños">
+        <h3>2. Tamales</h3>
+        <p>Se preparan con masa de maíz y pueden llevar pollo, frijoles, queso o hierbas. Normalmente se envuelven en hojas de plátano.</p>
+      </div>
+      <div class="card food">
+        <img src="https://surfcityelsalvador.sv/wp-content/uploads/2023/01/Gastronomia-RESTAURANT-RELAJO-ZR-07102022-CD-28-scaled.jpg" alt="Empanadas salvadoreñas">
+        <h3>3. Empanadas de plátano</h3>
+        <p>Un antojito dulce hecho con plátano maduro, relleno de frijoles o crema de leche y cubierto con azúcar.</p>
+      </div>
+    </div>
+
+    <div class="recipe">
+      <h3>Receta sencilla: Pupusas de queso y frijoles</h3>
+      <p><strong>Ingredientes:</strong> 2 tazas de masa harina, aproximadamente 1½ tazas de agua tibia, 1 taza de queso rallado, ½ taza de frijoles refritos y una pizca de sal.</p>
+      <p><strong>Pasos:</strong> Mezcla la masa con agua y sal. Forma una bola, haz un hueco en el centro y agrega queso y frijoles. Cierra la masa, aplánala con cuidado y cocínala en un comal o sartén caliente por ambos lados hasta que esté dorada. Sirve con curtido y salsa de tomate.</p>
+    </div>
+  </div>
+</div>
+
+<section id="historicos">
+  <h2>Lugares históricos</h2>
+  <p class="lead">Estos sitios ayudan a conocer el pasado prehispánico de El Salvador.</p>
+  <div class="grid">
+    <div class="card place">
+      <img src="https://photos-us.bazaarvoice.com/photo/2/cGhvdG86aG9sbGFuZA/2dc33388-2ec9-5bd1-9586-0583011690fe" alt="Joya de Cerén">
+      <h3>1. Joya de Cerén</h3>
+      <p>Aldea prehispánica preservada por ceniza volcánica. Es Patrimonio Mundial de la UNESCO y permite ver cómo vivía una comunidad agrícola hace más de mil años.</p>
+    </div>
+    <div class="card place">
+      <img src="https://assets.laprensagrafica.com/__export/1740527103315/sites/prensagrafica/img/2025/02/25/tazumal_1.jpg_673822677.jpg" alt="Tazumal">
+      <h3>2. Tazumal</h3>
+      <p>Importante sitio maya en Chalchuapa. Conserva grandes estructuras ceremoniales, una pirámide principal y objetos arqueológicos.</p>
+    </div>
+    <div class="card place">
+      <img src="https://www.pelago.com/img/products/SV-El%20Salvador/mayan-exploration-tazumal-pompeii-of-america-san-andres-ceremonial-center/13027bce-015a-4499-9d9d-8316d38e208f_mayan-exploration-tazumal-pompeii-of-america-san-andres-ceremonial-center.jpg" alt="San Andrés">
+      <h3>3. San Andrés</h3>
+      <p>Fue uno de los centros prehispánicos más grandes del país y probablemente una capital regional entre los años 600 y 900 d. C.</p>
+    </div>
+    <div class="card place">
+      <img src="https://assets.laprensagrafica.com/__export/1740527103315/sites/prensagrafica/img/2025/02/25/tazumal_1.jpg_673822677.jpg" alt="Casa Blanca">
+      <h3>4. Casa Blanca</h3>
+      <p>Sitio arqueológico de Chalchuapa con montículos, estructuras ceremoniales, museo y un taller tradicional de añil.</p>
+    </div>
+  </div>
+</section>
+
+<div class="full" id="turisticos">
+  <div class="wrap">
+    <h2>Lugares turísticos no históricos</h2>
+    <p class="lead">El Salvador también ofrece naturaleza, aventura, playas y pueblos pintorescos.</p>
+    <div class="grid">
+      <div class="card"><h3>1. Lago de Coatepeque</h3><p>Lago de origen volcánico famoso por sus aguas azules y actividades como kayak, paseos en lancha y buceo.</p></div>
+      <div class="card"><h3>2. El Tunco</h3><p>Playa muy conocida por el surf, sus atardeceres y su ambiente costero.</p></div>
+      <div class="card"><h3>3. Cerro Verde</h3><p>Parque natural de clima fresco con senderos y vistas de los volcanes de Santa Ana e Izalco.</p></div>
+      <div class="card"><h3>4. Ruta de las Flores</h3><p>Recorrido por pueblos como Juayúa, Apaneca y Ataco, con café, artesanías, montañas y gastronomía.</p></div>
+      <div class="card"><h3>5. El Boquerón</h3><p>Parque ubicado en el volcán de San Salvador. Su gran atractivo es el enorme cráter rodeado de vegetación.</p></div>
+    </div>
+  </div>
+</div>
+
+<section id="tradiciones">
+  <h2>Tradiciones y festivales culturales</h2>
+  <div class="grid">
+    <div class="card tradition"><h3>1. Fiestas Agostinas</h3><p>Se celebran en San Salvador del 1 al 6 de agosto en honor al Divino Salvador del Mundo. Incluyen desfiles, música, actividades religiosas y fuegos artificiales.</p></div>
+    <div class="card tradition"><h3>2. Carnaval de San Miguel</h3><p>Gran celebración de noviembre con música, baile, carrozas y fiestas en las calles de San Miguel.</p></div>
+    <div class="card tradition"><h3>3. Día de la Cruz</h3><p>El 3 de mayo muchas familias decoran una cruz con flores y papel de colores, y colocan frutas como parte de una tradición religiosa y popular.</p></div>
+    <div class="card tradition"><h3>4. Bolas de Fuego</h3><p>En Nejapa se realiza una tradición en la que participantes lanzan bolas encendidas protegidos con ropa y guantes especiales. Recuerda una antigua erupción y la historia local.</p></div>
+    <div class="card tradition"><h3>5. Semana Santa</h3><p>Se celebran procesiones, actos religiosos y alfombras decorativas. También se preparan comidas especiales durante la temporada.</p></div>
+  </div>
+</section>
+
+<div class="full" id="familia">
+  <div class="wrap">
+    <h2>La familia y sus valores</h2>
+    <p class="lead">No todas las familias son iguales, pero en muchas familias salvadoreñas hay relaciones cercanas entre padres, hijos, abuelos, tíos y primos.</p>
+    <div class="grid">
+      <div class="card"><h3>Valores comunes</h3><p>Respeto a los mayores, responsabilidad, trabajo, ayuda a la familia, hospitalidad, educación y mantener contacto con los parientes.</p></div>
+      <div class="card"><h3>Vida familiar</h3><p>Las reuniones familiares, celebraciones religiosas, cumpleaños y comidas compartidas suelen tener mucha importancia.</p></div>
+      <div class="card"><h3>Familia extendida</h3><p>Es común que abuelos, tíos, primos y otros familiares tengan una participación activa en la vida familiar.</p></div>
+    </div>
+
+    <h3 style="margin-top:34px">Comparación con familias estadounidenses</h3>
+    <div class="venn">
+      <div class="circle left">EL SALVADOR<br><br>Más énfasis, en promedio, en la familia extendida y reuniones frecuentes.</div>
+      <div class="middle">AMBAS<br><br>Amor<br>educación<br>respeto<br>apoyo<br>tradiciones</div>
+      <div class="circle right">EE. UU.<br><br>En promedio, más énfasis en independencia individual y hogares nucleares.</div>
+    </div>
+    <p class="small" style="color:#d7e7ff">Estas son tendencias generales; cada familia es diferente.</p>
+  </div>
+</div>
+
+<section id="musica">
+  <h2>La música</h2>
+  <p class="lead">Tres artistas salvadoreños o muy ligados a la música salvadoreña. Los botones abren una canción popular en YouTube para que puedas insertarla dentro de la foto en Google Sites.</p>
+  <div class="grid">
+    <div class="card music-card">
+      <div class="music-img">ÁLVARO<br>TORRES</div>
+      <div class="music-body">
+        <h3>Álvaro Torres</h3>
+        <p>Cantautor salvadoreño conocido por baladas románticas. Uno de sus mayores éxitos es <em>Nada se compara contigo</em>.</p>
+        <a class="yt" target="_blank" href="https://www.youtube.com/results?search_query=Alvaro+Torres+Nada+se+compara+contigo+official">▶ Ver canción en YouTube</a>
+      </div>
+    </div>
+    <div class="card music-card">
+      <div class="music-img">MARITO<br>RIVERA</div>
+      <div class="music-body">
+        <h3>Marito Rivera</h3>
+        <p>Cantante, pianista, compositor y arreglista nacido en San Miguel. Es conocido por su música tropical y Grupo Bravo.</p>
+        <a class="yt" target="_blank" href="https://www.youtube.com/results?search_query=Marito+Rivera+Sabrosa+Cumbia">▶ Ver “Sabrosa Cumbia”</a>
+      </div>
+    </div>
+    <div class="card music-card">
+      <div class="music-img">SHAKA<br>Y DRES</div>
+      <div class="music-body">
+        <h3>Shaka y Dres</h3>
+        <p>Dúo de hermanos de familia salvadoreña que mezcla sonidos latinos y urbanos. Una canción conocida es <em>Patria de Maíz</em>.</p>
+        <a class="yt" target="_blank" href="https://www.youtube.com/results?search_query=Shaka+y+Dres+Patria+de+Maiz">▶ Ver “Patria de Maíz”</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="full" id="micro">
+  <div class="wrap">
+    <h2>Micro de 2 minutos: “El Salvador es un país para querer”</h2>
+    <p class="lead">Guion listo para grabar como mini comercial del país.</p>
+    <div class="script" style="color:#182235">
+      <p>El Salvador es un país para querer porque, aunque es el país más pequeño de América Central, tiene muchísimo que ofrecer.</p>
+      <p>Primero, su naturaleza es increíble. Puedes visitar el Lago de Coatepeque, caminar cerca de volcanes como Santa Ana, ver el enorme cráter de El Boquerón o pasar un día en las playas del Pacífico. El Tunco es especialmente conocido por sus olas y por el surf.</p>
+      <p>También tiene una historia muy interesante. En Joya de Cerén puedes conocer cómo vivían las personas hace más de mil años. También hay sitios arqueológicos como Tazumal, San Andrés y Casa Blanca, donde todavía se pueden ver estructuras de las antiguas culturas de la región.</p>
+      <p>Y no se puede hablar de El Salvador sin mencionar la comida. Las pupusas son probablemente el plato más famoso. Se hacen con masa de maíz o arroz y pueden llevar queso, frijoles, chicharrón o loroco. También hay tamales, empanadas de plátano y muchos otros platos típicos.</p>
+      <p>El país tiene tradiciones llenas de música y color, como las Fiestas Agostinas, el Carnaval de San Miguel, el Día de la Cruz y las celebraciones de Semana Santa.</p>
+      <p>Para mí, El Salvador sería un lugar interesante para visitar porque combina naturaleza, cultura, comida, historia y tradiciones en un solo país. Por todas estas razones, El Salvador es un país para conocer, disfrutar y querer.</p>
+    </div>
+  </div>
+</div>
+
+<section>
+  <h2>Lista de requisitos</h2>
+  <div class="grid">
+    <div class="card"><span class="check">✓</span> Ubicación e información general</div>
+    <div class="card"><span class="check">✓</span> Gobierno, presidente, foto y biografía</div>
+    <div class="card"><span class="check">✓</span> Moneda y tipo de cambio</div>
+    <div class="card"><span class="check">✓</span> 3 comidas + receta + fotos</div>
+    <div class="card"><span class="check">✓</span> 4 lugares históricos + descripciones</div>
+    <div class="card"><span class="check">✓</span> 5 lugares turísticos</div>
+    <div class="card"><span class="check">✓</span> 5 tradiciones/festivales</div>
+    <div class="card"><span class="check">✓</span> Familia y valores</div>
+    <div class="card"><span class="check">✓</span> Comparación tipo Venn</div>
+    <div class="card"><span class="check">✓</span> 3 artistas + enlaces de video</div>
+    <div class="card"><span class="check">✓</span> Guion de micro de 2 minutos</div>
+  </div>
+</section>
+
+<section>
+  <h2>Fuentes</h2>
+  <ul class="sources">
+    <li>Presidencia de la República de El Salvador — biografía y retrato oficial de Nayib Bukele.</li>
+    <li>Asamblea Legislativa de El Salvador — Constitución de la República.</li>
+    <li>UNESCO World Heritage Centre — Joya de Cerén.</li>
+    <li>El Salvador Travel / Ministerio de Turismo — gastronomía, sitios arqueológicos, Lago de Coatepeque, Cerro Verde y Ruta de las Flores.</li>
+    <li>Biografías oficiales de Álvaro Torres y Marito Rivera; Spotify/Apple Music para información de canciones y artistas.</li>
+  </ul>
+</section>
+
+<footer>Proyecto de país de habla hispana • El Salvador 🇸🇻</footer>
+</body>
+</html>
